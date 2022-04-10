@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+{% load bootstrap4 %}
+{% block content %}
+
+<div class="container">
+    <form action="" method="post" novalidate>
+        {% csrf_token%}
+        {% bootstrap_form form %}
+        <button type="submit" class="btn btn-warning btn-md mx-auto">Register</button>
+    
+    </form>
+</div>
+{% endblock %}
