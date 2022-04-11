@@ -2,10 +2,12 @@ from urllib.robotparser import RequestRate
 from django.shortcuts import render,redirect
 from .forms import SignupForm
 from django.contrib.auth import login, authenticate
-from rest_framework import viewsets
 from .models import Profile
-from .serializers import ProfileSerializer
 
+
+
+# from .serializers import ProfileSerializer
+# from rest_framework import viewsets
 # Create your views here.
 
 def index(request):
@@ -13,10 +15,10 @@ def index(request):
 
 
 
-class ProfileViewSet(viewsets.ModelViewSet):
-    queryset = Profile.objects.all()
-    print(queryset)
-    serializer_class = ProfileSerializer
+# class ProfileViewSet(viewsets.ModelViewSet):
+#     queryset = Profile.objects.all()
+#     print(queryset)
+#     serializer_class = ProfileSerializer
 
 
 def signup(request):

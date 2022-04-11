@@ -38,10 +38,21 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+
     'awwwardss',
     'bootstrap4',
-    'rest_framework'
+    
+    
+  
+   
 ]
+
+# UPLOADCARE = {
+#     'pub_key': '7b20971e08eb6b6af401',
+#     'secret': '1f5ae35c18a3d46ac2fa',
+#       'pyuploadcare.dj',
+# }
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -140,9 +151,9 @@ LOGIN_REDIRECT_URL = 'index'
 
 LOGOUT_REDIRECT_URL = 'index' 
 
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ],
-    'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.NamespaceVersioning'
-}
+# REST_FRAMEWORK = {
+#     'DEFAULT_PERMISSION_CLASSES': [
+#         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+#     ],
+#     'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.NamespaceVersioning'
+# }
