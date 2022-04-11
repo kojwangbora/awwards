@@ -21,7 +21,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
                        aria-haspopup="true"
-                       aria-expanded="false">{{ user.username|title }}
+                       aria-expanded="false">{{ user.username|title }} <img class="rounded-circle pro-img" src="{{ user.profile.profile_picture.url }}">
                     </a>
                     <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item text-center" href="#">Profile</a>
@@ -34,7 +34,7 @@
                 <a href="{% url 'login' %}" class="login btn btn-sm btn-warning"> Register/Login</a>
                 {% endif %}
 
-                <a href="" class="btn btn-sm btn-warning" id="site"> Submit your site</a>
+                <a href="" class="btn btn-sm btn-warning" id="site"> Submit site</a>
             </ul>
         </div>
     </div>
