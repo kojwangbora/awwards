@@ -36,4 +36,3 @@ class Post(models.Model):
     description = models.CharField(max_length=255)
     technologies = models.CharField(max_length=200)
     photo = ImageField()
- 
