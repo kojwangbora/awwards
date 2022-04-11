@@ -25,6 +25,6 @@ def signup(request):
     return render(request, 'registration/signup.html', {'form': form})
 
 
-    def profile(request, username):
+def profile(request, username):
         return render(request, 'profile.html')
 
