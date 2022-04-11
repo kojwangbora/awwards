@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -39,21 +42,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-
-    'awwwardss',
     'bootstrap4',
-    
-    
-  
-   
+    'cloudinary',
+    'awwwardss',  
 ]
 
-# UPLOADCARE = {
-#     'pub_key': '7b20971e08eb6b6af401',
-#     'secret': '1f5ae35c18a3d46ac2fa',
-#       'pyuploadcare.dj',
-# }
-
+ 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -139,6 +133,13 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
+
+cloudinary.config( 
+  cloud_name = "access-moringasch", 
+  api_key = "641243856321531", 
+  api_secret = "rq2Yt965l76gCmSUZ-Z4DFwlF94" 
+)
+
 MEDIA_URL = '/media/'
 
 # Default primary key field type
@@ -148,12 +149,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
  
 LOGIN_REDIRECT_URL = 'index'
-
-LOGOUT_REDIRECT_URL = 'index' 
-
-# REST_FRAMEWORK = {
-#     'DEFAULT_PERMISSION_CLASSES': [
-#         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-#     ],
-#     'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.NamespaceVersioning'
-# }
+LOGOUT_REDIRECT_URL = 'index'
