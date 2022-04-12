@@ -3,6 +3,8 @@ from django.shortcuts import render,redirect
 from .forms import SignupForm
 from django.contrib.auth import login, authenticate
 from .models import Profile
+from .serializers import ProfileSerializer, UserSerializer
+from django.contrib.auth.models import User
 
 
 
@@ -17,8 +19,11 @@ def index(request):
 
 class ProfileViewSet(viewsets.ModelViewSet):
     queryset = Profile.objects.all()
-    print(queryset)
     serializer_class = ProfileSerializer
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
 
 
 def signup(request):
