@@ -32,7 +32,7 @@ class Post(models.Model):
     url = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
     technologies = models.CharField(max_length=200)
-    image = CloudinaryField('image', default='preview.png')
+    photo = CloudinaryField('image', default='preview.png')
     user = models.ForeignKey(User, on_delete=models.CASCADE)
      
 
