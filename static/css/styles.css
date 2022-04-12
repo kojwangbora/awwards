@@ -18,3 +18,7 @@ h1
     height: 50px;
     width:  50px;
 }
+
+#bg-img{
+    background-image: url('../images/background.jpeg');
+}
