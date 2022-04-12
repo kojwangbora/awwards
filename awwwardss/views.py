@@ -6,8 +6,8 @@ from .models import Profile
 
 
 
-# from .serializers import ProfileSerializer
-# from rest_framework import viewsets
+from .serializers import ProfileSerializer
+from rest_framework import viewsets
 # Create your views here.
 
 def index(request):
@@ -15,10 +15,10 @@ def index(request):
 
 
 
-# class ProfileViewSet(viewsets.ModelViewSet):
-#     queryset = Profile.objects.all()
-#     print(queryset)
-#     serializer_class = ProfileSerializer
+class ProfileViewSet(viewsets.ModelViewSet):
+    queryset = Profile.objects.all()
+    print(queryset)
+    serializer_class = ProfileSerializer
 
 
 def signup(request):
