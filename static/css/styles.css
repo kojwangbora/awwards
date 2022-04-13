@@ -20,5 +20,12 @@ h1
 }
 
 #bg-img{
-    background-image: url('../images/background.jpeg');
+    background-image: url('../images/backgroun.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
+
+
+ 
